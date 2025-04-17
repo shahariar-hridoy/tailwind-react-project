@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "name": "Basic",
+        "price": "৳999/month",
+        "description": "Great for beginners who need access to equipment and space.",
+        "features": [
+            "Access to gym equipment",
+            "Locker facility",
+            "1 personal training session/month",
+            "Free Wi-Fi",
+            "Open 6am - 10pm",
+            "Basic fitness assessment"
+            
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Standard",
+        "price": "৳1,499/month",
+        "description": "Ideal for regulars who want more classes and support.",
+        "features": [
+            "Everything in Basic",
+            "Unlimited group classes",
+            "4 personal training sessions/month",
+            "Nutrition consultation",
+            "Sauna access",
+            "Body composition analysis",
+            "Yoga and Zumba access"
+            
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Premium",
+        "price": "৳2,499/month",
+        "description": "All-access package with premium services and 24/7 access.",
+        "features": [
+            "Everything in Standard",
+            "Unlimited personal training",
+            "24/7 gym access",
+            "Massage therapy (2/month)",
+            "Private locker room",
+            "Dedicated coach",
+            "Priority booking for classes",
+            "Guest pass (5/month)"
+        ]
+    }
+]

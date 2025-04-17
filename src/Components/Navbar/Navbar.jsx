@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './link';
+import { CiMenuBurger } from 'react-icons/ci';
+import { IoClose } from 'react-icons/io5';
 
 const navigationLinks = [
     { id: 1, name: "Home", path: "/" },
@@ -9,13 +11,31 @@ const navigationLinks = [
     { id: 5, name: "Dashboard", path: "/dashboard" }
 ];
 
+const links = navigationLinks.map(route => <Link key={route.id} route={route} ></Link>)
 
 const Navbar = () => {
+
+    const [open, setOpen] = useState(false)
     return (
-        <nav>
-            {
-                navigationLinks.map(route => <Link key={route.id} route = {route} ></Link>)
-            }
+        <nav className='flex justify-between mx-10 my-4'>
+            <span className='flex' onClick={() => setOpen(!open)}>
+                {
+                    !open ? <IoClose className='md:hidden' size={15} /> : <CiMenuBurger className='md:hidden' size={15} />
+                }
+                <ul className={`md:hidden absolute duration-1000 ${!open? 'top-10':'-top-30'}`}>
+                    {
+                        links
+                    }
+                </ul>
+                <h3 className='ml-4'>My nav</h3>
+            </span>
+            <ul className="md:flex hidden">
+                {
+                    links
+                }
+            </ul>
+
+
             {/* <ul className='flex'>
                 <li className='mr-10'><a href="/">Home</a></li>
                 <li className='mr-10'><a href="/about">About</a></li>
@@ -29,6 +49,7 @@ const Navbar = () => {
                     </li>)
                 }
             </ul> */}
+            <button className='btn'>Sign In</button>
         </nav>
     );
 };
